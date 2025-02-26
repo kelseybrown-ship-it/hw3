@@ -1,0 +1,9 @@
+<div class="row">
+  <% for post in @posts %>
+    <div class="col-3">
+      <h4><%= post["activity"] %></h4>
+      <img class="img-fluid" src="<%= post["date"] %>" class="w-full">
+      <p><%= post["details"] %></p>
+    </div>
+  <% end %>
+</div>
