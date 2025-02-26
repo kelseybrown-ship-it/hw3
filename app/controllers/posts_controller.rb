@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     @post["date"] = params["date"]
     @post["details"] = params["details"]
     @post["place_id"] = params["place_id"]
-
+    @post["image"] = params["image"]
     # save Post row
     @post.save
 
