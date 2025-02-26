@@ -24,7 +24,6 @@ class PlacesController < ApplicationController
     # assign user-entered form data to Places's columns
     @place["city"] = params["city"]
     @place["country"] = params["country"]
-    @place["post"]= params["post"]
 
     # save Company row
     @place.save
@@ -46,7 +45,6 @@ class PlacesController < ApplicationController
     # assign user-entered form data to Company's columns
     @place["city"] = params["city"]
     @place["country"] = params["country"]
-    @place["post"]= params["post"]
 
     # save Company row
     @place.save
