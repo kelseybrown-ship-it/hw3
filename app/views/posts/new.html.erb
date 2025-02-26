@@ -17,7 +17,10 @@
       <label for="image">Image URL</label>
     <input type="text" name="image">
   </p>
+
+  <input type="hidden" name="place_id" value="<%= @place["id"] %>" id="place_id_input">
+
   <button>Save</button>
-  <a href="/posts">Cancel</a>
+  <a href="/places/<%= @place["id"] %>">Cancel</a>
   <p><a href="/places">Back to All Places</a></p>
 </form>
