@@ -1,16 +1,16 @@
 class PlacesController < ApplicationController
   def index
     # find all places rows
-    @places = Places.all
+    @places = Place.all
     # render places/index view
   end
   
   def show
     # find a Place
-    @places = Place.find_by({ "id" => params["id"] })
+    @place = Place.find_by({ "id" => params["id"] })
     # find Posts for the Place
-    @places = Post.where({ "place_id" => @places["id"] })
-    # render postss/show view with details about place
+    @posts = Post.where({ "place_id" => @place["id"] })
+    # render posts/show view with details about place
   end
 
   def new
