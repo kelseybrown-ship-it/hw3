@@ -2,7 +2,8 @@
 
 <h1><%= @place["city"] %></h1>
 
-<p><%= @place["country"] %>, <%= @place["post"] %></p>
+<p><%= @place["country"] %>
+ <%= @place["post"] %></p>
 
 <form action="/places/<%= @place["id"] %>" method="post">
   <input type="hidden" name="_method" value="delete">
