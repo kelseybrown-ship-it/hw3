@@ -3,7 +3,19 @@
 <h1><%= @place["city"] %></h1>
 
 <p><%= @place["country"] %>
- <%= @place["post"] %></p>
+
+<h3>Posts</h3>
+
+<ul>
+  <% for post in @posts %>
+    <li>
+      <%= post["activity"] %>
+      <br>
+      <%= post["date"] %>
+      <%= post["details"] %>
+    </li>
+  <% end %>
+</ul>
 
 <form action="/places/<%= @place["id"] %>" method="post">
   <input type="hidden" name="_method" value="delete">
