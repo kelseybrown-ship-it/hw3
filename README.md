@@ -17,3 +17,17 @@ Full instructions at https://entr451.com/homework-3/
   <a href="/places/<%= @place["id"] %>">Cancel</a>
 
       @posts = Post.where({ "place_id" => @place["id"] })
+
+          @place = Place.find_by({ "id" => params["place_id"] })
+    @posts = Post.where({ "place_id" => @place["id"] })
+
+    <ul>
+  <% for post in @posts %>
+    <li>
+      <%= post["activity"] %>
+      <br>
+      <%= post["date"] %>
+      <%= post["details"] %>
+    </li>
+  <% end %>
+</ul>

@@ -11,8 +11,7 @@ class PostsController < ApplicationController
   def create
     # start with a new Post
     @post = Post.new
-    @place = Place.find_by({ "id" => params["place_id"] })
-    @posts = Post.where({ "place_id" => @place["id"] })
+
 
     # assign user-entered form data to Post's columns
     @post["activity"] = params["activity"]
@@ -20,7 +19,6 @@ class PostsController < ApplicationController
     @post["details"] = params["details"]
     @post["place_id"] = params["place_id"]
     @post["image"] = params["image"]
-    #@post["place"] = params["place"]
     # save Post row
     @post.save
 
