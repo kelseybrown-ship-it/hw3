@@ -23,7 +23,6 @@ class PlacesController < ApplicationController
 
     # assign user-entered form data to Places's columns
     @place["city"] = params["city"]
-    @place["country"] = params["country"]
 
     # save Company row
     @place.save
@@ -44,7 +43,6 @@ class PlacesController < ApplicationController
 
     # assign user-entered form data to Company's columns
     @place["city"] = params["city"]
-    @place["country"] = params["country"]
 
     # save Company row
     @place.save
@@ -55,7 +53,7 @@ class PlacesController < ApplicationController
 
   def destroy
     # find a Place
-    @Place = Place.find_by({ "id" => params["id"] })
+    @place = Place.find_by({ "id" => params["id"] })
 
     # destroy Company row
     @place.destroy

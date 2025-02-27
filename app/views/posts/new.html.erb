@@ -3,20 +3,21 @@
 <form action="/posts" method="post">
   <p>
     <label for="activity">Activity</label>
-    <input type="text" name="activity">
+    <input type="text" name="activity" id="activity">
   </p>
     <p>
     <label for="date">Date</label>
-    <input type="integer" name="date">
+    <input type="integer" name="date" id="date">
   </p>
   <p>
     <label for="details">Details</label>
-    <input type="text" name="details">
+    <input type="text" name="details" id="details">
   </p>
   <p>
       <label for="image">Image URL</label>
-    <input type="text" name="image">
+    <input type="text" name="image" id="image">
   </p>
+   <input type="hidden" name="place_id" id="place_id" value="<%= params["place_id"] %>">
 
   <button>Save</button>
   <p><a href="/places">Back to All Places</a></p>

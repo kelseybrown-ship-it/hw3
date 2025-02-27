@@ -3,7 +3,7 @@ class PostsController < ApplicationController
     @posts = Post.all
     # render posts/index view
   end
-  
+
   def new
     # render posts/new view with new Post form
   end
@@ -17,8 +17,8 @@ class PostsController < ApplicationController
     @post["activity"] = params["activity"]
     @post["date"] = params["date"]
     @post["details"] = params["details"]
-    @post["place_id"] = params["place_id"]
     @post["image"] = params["image"]
+    @post["place_id"] = params["place_id"]
     # save Post row
     @post.save
 

@@ -2,19 +2,15 @@
 
 <h1><%= @place["city"] %></h1>
 
-<p><%= @place["country"] %>
-
 <h3>Posts</h3>
 
 <form action="/posts" method="post">
  <% for post in @posts %>
-    <p>
-      <%= post["activity"] %>
-      <br>
-      <%= post["date"] %>
-      <%= post["details"] %>
-      <%= post["image"] %>
-    </p>
+        <h4><%= post["activity"] %></h4>
+      <p><%= post["date"] %></p>
+      <p><%= post["details"] %></p>
+      <img class="img-fluid" src="<%= post["image"] %>" class="w-full">
+
  <% end %>
 
 
